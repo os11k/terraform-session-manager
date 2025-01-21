@@ -98,4 +98,4 @@ You can find more information about the input parameters and options available f
 ## Additional Resources
 
 For a more in-depth explanation and practical examples, check out the blog post here:  
-**[Exploring AWS Systems Manager Session Manager](https://blog.volunge.net/jekyll/update/2025/01/07/aws-systems-manager-session-manager.html)**
+**[Exploring AWS Systems Manager Session Manager](https://cyberpunk.tools/jekyll/update/2025/01/07/aws-systems-manager-session-manager.html)**
