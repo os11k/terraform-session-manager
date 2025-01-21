@@ -21,7 +21,7 @@ resource "aws_iam_role" "ssm_role" {
 #### Create Policy to allow instance profile to put objects in the S3 bucket ####
 
 resource "aws_iam_policy" "ec2_policy" {
-  name        = "ssm_logs_policy_${var.aws_region}"
+  name        = "ssm_logs_policy"
   description = "Policy allowing put and get operations for ec2 to place session logs in specified bucket"
 
   policy = jsonencode({
