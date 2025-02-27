@@ -46,17 +46,15 @@ resource "aws_iam_policy" "ec2_policy" {
   })
 }
 
-resource "aws_iam_policy_attachment" "s3_attach" {
-  name       = "ssm-s3-put"
-  roles      = [aws_iam_role.ssm_role.name]
+resource "aws_iam_role_policy_attachment" "s3_attach" {
+  role       = aws_iam_role.ssm_role.name
   policy_arn = aws_iam_policy.ec2_policy.arn
 
 }
 
 #### Attach AWS and Customer managed policies to the IAM role ####
 
-resource "aws_iam_policy_attachment" "ssm-attach" {
-  name       = "managed-ssm-policy-attach"
-  roles      = [aws_iam_role.ssm_role.name]
+resource "aws_iam_role_policy_attachment" "ssm-attach" {
+  role       = aws_iam_role.ssm_role.name
   policy_arn = var.ssm_policy_arn
 }
